@@ -12,7 +12,7 @@ body {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 /* ========= Sidebar ========= */
@@ -43,6 +43,45 @@ li a {
 /* ========= Header ========= */
 section.header {
   grid-row: 1 / 1;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  padding: 0px 50px;
+}
+
+.header .top-half,
+.header .bottom-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-input {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border: 0px solid #f0f0f0;
+  border-radius: 16px;
+}
+
+.user-actions {
+  display: flex;
+  gap: 30px;
+}
+
+.user-actions button {
+  color: white;
+  background-color: #334dcc;
+  padding: 8px 32px;
+  border: solid #334dcc;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.user-actions button:hover {
+  background-color: #516bea;
+  border-color: #516bea;
 }
 
 /* ========= Main ========= */
