@@ -29,7 +29,7 @@ section.sidebar {
   color: var(--white-colour);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
 }
 
 .sidebar-pages ul,
@@ -37,12 +37,19 @@ section.sidebar {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
 
-li a {
-  color: white;
+.sb-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: var(--white-colour);
   text-decoration: none;
+}
+
+.sb-item img {
+  width: 20px;
 }
 
 /* ========= Header ========= */
@@ -53,6 +60,11 @@ section.header {
   padding: 0px 50px;
 }
 
+.icon {
+  width: 20px;
+  cursor: pointer;
+}
+
 .header .top-half,
 .header .bottom-half {
   display: flex;
@@ -60,11 +72,28 @@ section.header {
   align-items: center;
 }
 
+.header .top-half {
+  gap: 20%;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+}
+
 .search-input {
   background-color: var(--light-colour);
-  padding: 8px 12px;
+  width: 100%;
+  padding: 6px 12px;
   border: 0px solid var(--light-colour);
   border-radius: 16px;
+}
+
+.account-top {
+  display: flex;
+  gap: 10px;
 }
 
 .user-actions {
