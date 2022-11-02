@@ -58,11 +58,19 @@ section.header {
   display: grid;
   grid-template-rows: 40% 60%;
   padding: 0px 50px;
+  box-shadow: 0px 5px 16px rgb(0 0 0 / 20%);
+  z-index: 2;
 }
 
 .icon {
   width: 20px;
+  height: 20px;
   cursor: pointer;
+}
+
+.profile-pic {
+  border: 3px solid var(--light-colour);
+  border-radius: 50%;
 }
 
 .header .top-half,
@@ -93,7 +101,12 @@ section.header {
 
 .account-top {
   display: flex;
+  align-items: center;
   gap: 10px;
+}
+
+.account-top .profile-pic {
+  width: 32px;
 }
 
 .user-actions {
@@ -116,6 +129,18 @@ section.header {
 .user-actions button:hover {
   background-color: var(--sidebar-colour);
   border-color: var(--sidebar-colour);
+}
+
+.account-bottom {
+  display: grid;
+  grid-template-rows: 1fr 1.2fr;
+  grid-template-columns: 52px 1fr;
+  column-gap: 20px;
+}
+
+.account-bottom .profile-pic {
+  width: 52px;
+  grid-row: 1 / -1;
 }
 
 /* ========= Main ========= */
