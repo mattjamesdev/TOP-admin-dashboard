@@ -7,12 +7,16 @@
   --light-colour: #e2e8f0;
   --sidebar-colour: #334155;
   --button-colour: #1e293b;
+  --semi-light-colour: #475560;
 }
 
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+ h1, h2, h3, h4, h5, h6 {
+   color: var(--button-colour);
+ }
 
 .container {
   width: 100vw;
@@ -33,6 +37,11 @@ section.sidebar {
   gap: 50px;
 }
 
+.sidebar h1,
+.sidebar li {
+  color: var(--white-colour);
+}
+
 .sidebar-pages ul,
 .sidebar-settings ul {
   list-style: none;
@@ -45,7 +54,6 @@ section.sidebar {
   display: flex;
   gap: 15px;
   align-items: center;
-  color: var(--white-colour);
   text-decoration: none;
 }
 
@@ -154,6 +162,10 @@ section.main {
   gap: 16px;
 }
 
+.main p {
+  color: var(--semi-light-colour);
+}
+
 .main-section-container {
   padding-top: 32px;
   display: grid;
@@ -177,9 +189,13 @@ section.main {
   border-left: 8px solid var(--sidebar-colour);
   border-radius: 8px;
   padding: 8px 16px 8px 8px;
-  box-shadow: 4px 4px 8px rgb(0 0 0 / 20%);
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 10%);
   z-index: 2;
   transition: background-color 0.1s ease-out;
+}
+
+.card p {
+  font-size: 0.85rem;
 }
 
 .card:hover {
@@ -200,4 +216,41 @@ section.main {
 }
 
 /* Right panel */
+.announcements,
+.trending {
+  background-color: var(--white-colour);
+  padding: 16px;
+  border: solid var(--white-colour);
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 10%);
+}
 
+.announcements ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements ul li {
+  padding: 4px 0px;
+  border-bottom: 1px solid var(--light-colour);
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.announcements ul li:first-child {
+  padding-top: 0;
+}
+
+.announcements ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.announcements ul li h4 {
+  font-size: 0.85rem;
+}
+
+.announcements ul li p {
+  font-size: 0.75rem;
+}
