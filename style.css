@@ -260,3 +260,37 @@ section.main {
 .announcements ul li p {
   font-size: 0.75rem;
 }
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trending-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.trending-item img {
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--light-colour);
+  border-radius: 50%;
+}
+
+.trending-item .tr-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trending-item h5 {
+  padding-bottom: 4px;
+}
+
+.trending-item p {
+  font-size: 0.75rem;
+}
